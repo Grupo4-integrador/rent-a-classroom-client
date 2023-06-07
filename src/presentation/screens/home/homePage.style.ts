@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
+
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background-color: red;
+  background-image: url(../../../components/assets/fundo-tela-login.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -25,42 +26,94 @@ export const Box = styled.div`
   justify-content: center;
   gap: 10px;
   
-  @media (min-width: 320px) {
-    width: 95%;
+  @media (max-width: 1200px) {
+    width: 45%;
   }
   
-  @media (min-width: 768px) {
-    width: 35%;
+  @media (max-width: 992px) {
+    width: 55%;
   }
+  @media (max-width: 768px) {
+    width: 75%;
+  }
+  
+  
+  @media (min-width: 320px) and (max-width:560px) {
+    width: 90%;
+  }
+`;
+export const Img = styled.img`
+  display: flex;
+  width: 100%;
 
-  @media (min-width: 992px) {
-    width: 35%;
-  }
+`;
 
-  @media (min-width: 1200px) {
-    width: 35%;
-  }
+export const Title = styled.p`
+  font-size: 1.5em;
+  text-align: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color: #686868;
+
 `;
 
 export const InputGroup = styled.div`
   font-family: "Segoe UI", sans-serif;
-  max-width: 190px;
-  position: relative;
+  padding: 10px;
 `;
 export const Input = styled.input`
   font-size: 100%;
-  width: 465;
-  height: 45;
+  width: 30vw;
+  height: 45px;
   outline: none;
   border: 2px solid rgb(200, 200, 200);
   background-color: transparent;
-  border-radius: 20px;
-  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  margin: 10px;
+
+  @media (max-width: 1200px) {
+    width: 40vw;
+  }
+  
+  @media (max-width: 992px) {
+    width: 45.5vw;
+  }
+  @media (max-width: 768px) {
+    width: 45.5vw;
+  }
+  
+  
+  @media (min-width: 320px) and (max-width:560px) {
+    width: 70vw;
+  }
 `;
-export const Label = styled.label`
-  font-size: 100%;
-  position: absolute;
-  pointer-events: none;
-  transition: all 0.3s ease;
-  color: rgb(100, 100, 100);
+
+export const ButtonGroup = styled.div`
+  font-family: "Segoe UI", sans-serif;
+  padding: 10px;
+`;
+
+export const Button = styled.button`
+      font-size: 100%;
+  width: 30vw;
+  height: 45px;
+  border-radius: 5px;
+  margin: 10px;
+  display: flex;
+
+  @media (max-width: 1200px) {
+    width: 40vw;
+  }
+  @media (max-width: 992px) {
+    width: 45.5vw;
+  }
+  @media (max-width: 768px) {
+    width: 45.5vw;
+  }
+  @media (min-width: 320px) and (max-width:560px) {
+    width: 70vw;
+  }
 `;

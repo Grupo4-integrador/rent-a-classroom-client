@@ -1,17 +1,19 @@
-import { Container, Box, InputGroup, Input, Label } from "./homePage.style";
+import { Container, Box, InputGroup, Input, Button, ButtonGroup, Title, Img } from "./homePage.style";
+import Logo from '../../../components/assets/logo.png';
 export function HomePage() {
   return (
     <Container>
       <Box>
-        <p>Login - Sistemas de Reservas de Espaços</p>
+        <Img src={Logo}></Img>
+        <Title>Login - Sistemas de Reservas de Espaços</Title>
         <InputGroup>
-          <Input type="text" placeholder="Login" />
+          <Input type="text" placeholder="Informe seu Login" />
+          <Input type="text" placeholder="Insira sua Senha" />
         </InputGroup>
-        <InputGroup>
-          <Input type="text" placeholder="Senha" />
-        </InputGroup>
-        <button>Login</button>
-        <button>Esqueci minha senha</button>
+        <ButtonGroup>
+        <Button>Login</Button>
+        <Button>Esqueci minha senha</Button>
+        </ButtonGroup>
       </Box>
     </Container>
   );
