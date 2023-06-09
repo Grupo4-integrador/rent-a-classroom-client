@@ -2,6 +2,11 @@ import styled from "styled-components";
 
 import backgroundImg from "../../../components/assets/fundo-tela-login.png";
 
+interface LabelProps {
+  focused: boolean;
+  hasValue: boolean;
+}
+
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
@@ -49,6 +54,7 @@ export const HeaderBox = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 10px 10px 0px 0px;
+  border-bottom: 2px solid #8f8989c9;
 
 `;
 
@@ -57,6 +63,7 @@ export const Img = styled.img`
   width: 100%;
   transform: translate(-50% -50%);
   top: 0;
+
 `;
 
 export const Title = styled.p`
@@ -72,13 +79,6 @@ export const Title = styled.p`
 export const InputGroup = styled.div`
   font-family: "Segoe UI", sans-serif;
   position: relative;
-  .teste:hover{
-    border: 0.5px solid rgb(00, 00, 00);
-  }
-  .teste:focus{
-    border: 1px solid #0000ee;
-  }
-  
 `;
 
 export const ButtonGroup = styled.div`
@@ -139,12 +139,13 @@ export const Input = styled.input`
 
 `;
 
-export const Label = styled.label`
+export const Label = styled.label<LabelProps>`
   position: absolute;
-
-  top: 24px;
-  left: 20px;
+  top: ${({ focused, hasValue }) => (focused || hasValue ? '0' : '24px')};
+  left: ${({ focused, hasValue }) => (focused || hasValue ? '30px' : '20px')};
   background: transparent;
+  transition: all 0.3s ease;
+
 
 
   ${Input}:focus ~ & {
@@ -163,10 +164,12 @@ export const Label = styled.label`
  transition: all 0.3s ease;
 `;
 
-export const Imgopacity = styled.div`
-    opacity: 0.6;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    background: #fff;
+export const ErrorMessage = styled.p`
+color: red;
+font-size: 14px;
+margin-top: 5px;
+font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size:15px;
 `;
