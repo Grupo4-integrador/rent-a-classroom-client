@@ -4,11 +4,11 @@
 Este projeto é um sistema de reservas de salas para a faculdade Uniamérica. Ele permite que os professores façam reservas e solicitações de materiais de forma organizada e eficiente.
 
 ## Requisitos do Sistema
-- Node.js (versão X.X.X)
+- Node.js (versão 18.15.0)
 - Navegador web compatível (recomendado: Chrome, Firefox, Safari)
 
 ## Configuração do Ambiente de Desenvolvimento
-1. Clone o repositório: `git clone https://github.com/seu-usuario/nome-do-repositorio.git`
+1. Clone o repositório: `git clone https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/Grupo4-integrador/rent-a-classroom-client.git`
 2. Acesse o diretório do projeto: `cd nome-do-repositorio`
 3. Instale as dependências do projeto: `yarn install`
 4. Execute o projeto localmente: `yarn dev`
