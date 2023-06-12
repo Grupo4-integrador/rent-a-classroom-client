@@ -18,7 +18,6 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
 `;
 export const Box = styled.div`
   width: 35%;
@@ -55,7 +54,6 @@ export const HeaderBox = styled.div`
   justify-content: center;
   border-radius: 10px 10px 0px 0px;
   border-bottom: 2px solid #8f8989c9;
-
 `;
 
 export const Img = styled.img`
@@ -63,7 +61,6 @@ export const Img = styled.img`
   width: 100%;
   transform: translate(-50% -50%);
   top: 0;
-
 `;
 
 export const Title = styled.p`
@@ -74,11 +71,6 @@ export const Title = styled.p`
   font-weight: 700;
   font-size: 20px;
   color: #686868;
-`;
-
-export const InputGroup = styled.div`
-  font-family: "Segoe UI", sans-serif;
-  position: relative;
 `;
 
 export const ButtonGroup = styled.div`
@@ -92,10 +84,9 @@ export const ButtonGroup = styled.div`
     line-height: 1.5;
     font-family: sans-serif;
     cursor: pointer;
-
   }
-  .login-bt:hover{
-    background-color:#0000ee;
+  .login-bt:hover {
+    background-color: #0000ee;
     transition: all 0.6s ease;
   }
   .forgetPassword-bt {
@@ -105,12 +96,18 @@ export const ButtonGroup = styled.div`
     justify-content: center;
     cursor: pointer;
   }
-  .forgetPassword-bt:hover{
-    background-color:rgba(0, 0, 238, 0.8);
-    color:white;
+  .forgetPassword-bt:hover {
+    background-color: rgba(0, 0, 238, 0.8);
+    color: white;
     transition: all 0.6s ease;
   }
 `;
+
+export const InputGroup = styled.div`
+  font-family: "Segoe UI", sans-serif;
+  position: relative;
+`;
+
 export const Input = styled.input`
   font-size: 100%;
   width: 30vw;
@@ -136,23 +133,20 @@ export const Input = styled.input`
   @media (min-width: 320px) and (max-width: 560px) {
     width: 70vw;
   }
-
 `;
 
 export const Label = styled.label<LabelProps>`
   position: absolute;
-  top: ${({ focused, hasValue }) => (focused || hasValue ? '0' : '24px')};
-  left: ${({ focused, hasValue }) => (focused || hasValue ? '30px' : '20px')};
-  background: transparent;
+  top: ${({ focused, hasValue }) => (focused || hasValue ? "0" : "24px")};
+  left: ${({ focused, hasValue }) => (focused || hasValue ? "30px" : "20px")};
+  background: white;
   transition: all 0.3s ease;
 
-
-
   ${Input}:focus ~ & {
-   top: 0px;
-   left: 30px;
-   background: white;
-   color: #0000ee;
+    top: 0px;
+    left: 30px;
+    background: white;
+    color: #0000ee;
   }
   ${Input}:placeholder-shown + & {
     top: 0px;
@@ -160,16 +154,16 @@ export const Label = styled.label<LabelProps>`
     background: white;
     color: #686868;
   }
- pointer-events: none;
- transition: all 0.3s ease;
+  pointer-events: none;
+  transition: all 0.3s ease;
 `;
 
 export const ErrorMessage = styled.p`
-color: red;
-font-size: 14px;
-margin-top: 5px;
-font-family: "Inter";
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  font-size:15px;
+  font-size: 15px;
 `;
