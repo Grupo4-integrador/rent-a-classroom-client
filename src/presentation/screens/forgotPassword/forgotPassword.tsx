@@ -9,7 +9,8 @@ import {
 	HeaderBox,
 	ButtonGroup,
 	Label,
-	ErrorMessage
+	ErrorMessage,
+	Overlay
 } from '../home/homePage.style';
 import { SubTitles, Title, SuccessMessage } from './forgotPassword.style';
 
@@ -77,6 +78,7 @@ export function ForgotPassword() {
 
 	return (
 		<Container>
+			<Overlay />
 			<Box>
 				<HeaderBox>
 					<Img src={Logo} alt='Logo' />

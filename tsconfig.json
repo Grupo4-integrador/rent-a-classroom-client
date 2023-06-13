@@ -23,6 +23,7 @@
     /** Paths */
     "baseUrl": ".",
     "paths": {
+      "~presentation/*": ["src/presentation/*"],
       "~components/*": ["src/components/*"]
     }
   },
