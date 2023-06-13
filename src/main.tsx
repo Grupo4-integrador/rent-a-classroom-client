@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import { HomePage } from "./routes/home";
 import { ForgotPassword } from "./routes/forgotPassword";
+import { Dashboard } from './routes/dashboard/dashboard.tsx'
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/forgotPassword",
         element: <ForgotPassword />
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />
       }
     ]
   }
