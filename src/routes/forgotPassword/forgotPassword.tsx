@@ -13,7 +13,7 @@ import {
 } from "../home/homePage.style";
 import { SubTitles, Title, SuccessMessage } from "./forgotPassword.style";
 
-import Logo from "../../../components/assets/logo.png";
+import Logo from "./../../components/assets/logo.png";
 
 export function ForgotPassword() {
   const [loginValue, setLoginValue] = useState('');
