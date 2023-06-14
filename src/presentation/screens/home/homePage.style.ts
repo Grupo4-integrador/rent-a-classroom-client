@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import backgroundImg from '../../../components/assets/fundo-tela-login.png';
+import backgroundImg from '~components/assets/fundo-tela-login.png';
 
 interface LabelProps {
 	focused: boolean;
