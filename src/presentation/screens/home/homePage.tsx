@@ -14,7 +14,7 @@ import {
 	ErrorMessage,
 	Overlay
 } from './homePage.style';
-import Logo from '../../../components/assets/logo.png';
+import Logo from '~components/assets/logo.png';
 
 export function HomePage() {
 	const [loginValue, setLoginValue] = useState('');
