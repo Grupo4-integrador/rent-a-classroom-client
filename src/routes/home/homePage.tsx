@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import apiFetch from "../../axios/axios";
 
 import {
   Container,
@@ -14,6 +15,10 @@ import {
   ErrorMessage
 } from "./homePage.style";
 import Logo from "../../../src/components/assets/logo.png";
+
+interface LoginResponse {
+  data: string;
+}
 
 export function HomePage() {
   const [loginValue, setLoginValue] = useState("");
@@ -54,28 +59,16 @@ export function HomePage() {
       return;
     }
 
-    // Enviar os dados para o back-end
     try {
-      const response = await fetch('URL_DO_BACKEND', {
-        method: 'POST',
-        body: JSON.stringify({ login: loginValue, password: passwordValue }),
-        headers: {
-          'Content-Type': 'application/json'
-        }
+      await apiFetch.post<LoginResponse>('/authenticator/login', {
+        email: loginValue,
+        senha: passwordValue,
       });
 
-      // Verificar a resposta do back-end
-      if (response.ok) {
-        // Sucesso! Redirecionar para a página desejada
-        navigate("/dashboard");
-      } else {
-        // O back-end retornou um erro, tratar a mensagem de erro
-        const data = await response.json();
-        setError(data.message);
-      }
+      navigate("/dashboard");
     } catch (error) {
-      // Ocorreu um erro durante a comunicação com o back-end
-      setError('Ocorreu um erro ao processar a solicitação');
+      console.error("Erro na requisição:", error);
+      setError("Ocorreu um erro ao processar a solicitação");
     }
   };
 
