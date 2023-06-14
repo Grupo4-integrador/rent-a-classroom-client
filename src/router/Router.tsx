@@ -1,9 +1,9 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import { HomePage } from '../presentation/screens/home';
+import Notfound from 'src/presentation/error/Notfound';
 import { Dashboard } from 'src/presentation/screens/dashboard';
 import { ForgotPassword } from 'src/presentation/screens/forgotPassword';
-import Notfound from 'src/presentation/error/Notfound';
 import Error from '../presentation/error/Error';
+import { HomePage } from '../presentation/screens/home';
 
 const router = createBrowserRouter([
 	{

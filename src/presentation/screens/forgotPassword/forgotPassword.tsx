@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
 	Container,
@@ -13,7 +13,6 @@ import {
 	Overlay
 } from '../home/homePage.style';
 import { SubTitles, Title, SuccessMessage } from './forgotPassword.style';
-
 import Logo from '~components/assets/logo.png';
 
 export function ForgotPassword() {
