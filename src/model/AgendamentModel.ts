@@ -4,6 +4,7 @@ import { Periodo } from './enum/PeriodoModel';
 import { Data } from './DataModel';
 import { Sala } from './SalaModel';
 import { Situacao } from './enum/SituacaoModel';
+import { Usuario } from './UsuarioModel';
 
 export class Agendamento extends AbstractEntity {
     usuario!: Usuario;
