@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Agendamento } from "./../model/AgendamentModel";
 import apiFetch from "./../axios/axios";
 import { AxiosResponse } from "axios";

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import apiFetch from "./../axios/axios";
 import { AxiosResponse } from "axios";
 import { Data } from "./../model/DataModel";
