@@ -25,8 +25,8 @@ export const BoxGrid = styled.div`
 
 export const Box = styled.div`
 	position: relative;
-	width: 26rem;
-	height: 18rem;
+	width: 35rem;
+	height: 22rem;
 	box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
 	display: flex;
 	flex-direction: column;

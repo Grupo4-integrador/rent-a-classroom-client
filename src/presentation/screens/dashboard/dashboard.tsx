@@ -8,6 +8,7 @@ import BoxAud from '~components/assets/Auditorio.jpg';
 import BoxMeet from '~components/assets/reuniao.jpg';
 import BoxClass from '~components/assets/sala-aula.jpeg';
 import { Footer } from '~components/footer';
+import { Header } from '~components/header';
 
 const StyledBox = styled(Box)`
 	background-size: cover;
@@ -17,6 +18,7 @@ const StyledBox = styled(Box)`
 export function Dashboard() {
 	return (
 		<Container>
+			<Header />
 			<BoxGrid>
 				<Link to='/' style={{ textDecoration: 'none' }}>
 					<StyledBox style={{ backgroundImage: `url(${BoxAud})` }}>

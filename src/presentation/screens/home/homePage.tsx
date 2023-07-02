@@ -13,7 +13,7 @@ import {
 	Label,
 	ErrorMessage
 } from './homePage.style';
-import Logo from '../../../src/components/assets/logo.png';
+import Logo from '~components/assets/logo.png';
 
 interface LoginResponse {
 	data: string;
