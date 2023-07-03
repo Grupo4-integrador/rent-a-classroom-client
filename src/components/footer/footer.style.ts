@@ -8,7 +8,9 @@ export const FooterContainer = styled.footer`
 	background-color: #f1f1f1;
 	padding: 0px;
 	text-align: center;
-	z-index: -1;
+	z-index: 1;
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 `;
 
 export const Copyright = styled.p`
